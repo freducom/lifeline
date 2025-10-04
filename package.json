@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yourusername/lifeline.git"
+    "url": "git+https://github.com/freducom/lifeline.git"
   },
   "keywords": [
     "timeline",
@@ -32,9 +32,9 @@
   "author": "Your Name",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/yourusername/lifeline/issues"
+    "url": "https://github.com/freducom/lifeline/issues"
   },
-  "homepage": "https://github.com/yourusername/lifeline#readme",
+  "homepage": "https://github.com/freducom/lifeline#readme",
   "devDependencies": {
     "eslint": "^8.0.0",
     "html-validate": "^7.0.0",
