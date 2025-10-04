@@ -639,10 +639,10 @@ const DATA = {
 };
 
 const TYPE_COLORS = {
-  work_experience: ["#1877f2", "#42b883", "#36cfc9", "#722ed1", "#eb2f96", "#f5222d", "#fa541c", "#fa8c16", "#faad14", "#a0d911", "#52c41a", "#13c2c2", "#1890ff", "#2f54eb"], // Facebook blue and modern accent colors
-  residence_history: ["#1c1e21", "#e4e6ea"], // dark gray and light gray - alternating
-  education: ["#faad14", "#ffc53d", "#ffd666", "#ffe58f", "#fff1b8"], // modern warm yellows
-  licenses_and_certifications: ["#f5222d"], // modern red
+  work_experience: ["#3B82F6", "#06B6D4", "#14B8A6", "#10B981", "#84CC16", "#EAB308", "#F97316", "#EF4444", "#EC4899", "#A855F7", "#6366F1", "#64748B"], // Cool and warm accent colors
+  residence_history: ["#0F172A", "#E2E8F0"], // dark and light neutral - alternating
+  education: ["#EAB308", "#F59E0B", "#F97316", "#FBBF24", "#FCD34D"], // warm yellow/orange tones
+  licenses_and_certifications: ["#EF4444"], // accent red
 };
 
 function parseDate(str, fallbackYear) {
@@ -777,7 +777,7 @@ function createTile(events, typeColors, year, weekNumber) {
   if (licenseEvents.length > 0) {
     licenseEvents.forEach((event, index) => {
       const leftPosition = index * 4; // 4px spacing between dots
-      tileContent += `<div style="position: absolute; bottom: 1px; left: ${leftPosition + 1}px; width: 3px; height: 3px; background: #d32f2f; border-radius: 50%;"></div>`;
+      tileContent += `<div style="position: absolute; bottom: 1px; left: ${leftPosition + 1}px; width: 3px; height: 3px; background: #EF4444; border-radius: 50%;"></div>`;
     });
   }
   
@@ -943,7 +943,7 @@ function showPopup(events, year, weekNumber) {
       eventsByType.work_experience.forEach(event => {
         popupContent += `
           <div class="popup-event">
-            <div class="popup-event-type" style="background: #1877f2;">Work Experience</div>
+            <div class="popup-event-type" style="background: #3B82F6;">Work Experience</div>
             <div class="popup-event-title">${event.title}</div>
             <div class="popup-event-company">${event.company}</div>
             ${event.description ? `<div class="popup-event-description">${event.description}</div>` : ''}
@@ -957,7 +957,7 @@ function showPopup(events, year, weekNumber) {
       eventsByType.education.forEach(event => {
         popupContent += `
           <div class="popup-event">
-            <div class="popup-event-type" style="background: #faad14;">Education</div>
+            <div class="popup-event-type" style="background: #EAB308;">Education</div>
             <div class="popup-event-title">${event.degree}</div>
             <div class="popup-event-company">${event.institution}</div>
             ${event.field ? `<div class="popup-event-description">Field: ${event.field}</div>` : ''}
@@ -971,7 +971,7 @@ function showPopup(events, year, weekNumber) {
       eventsByType.licenses_and_certifications.forEach(event => {
         popupContent += `
           <div class="popup-event">
-            <div class="popup-event-type" style="background: #f5222d;">Certificate</div>
+            <div class="popup-event-type" style="background: #EF4444;">Certificate</div>
             <div class="popup-event-title">${event.name}</div>
             <div class="popup-event-company">${event.issuer}</div>
             ${event.description ? `<div class="popup-event-description">${event.description}</div>` : ''}
@@ -985,7 +985,7 @@ function showPopup(events, year, weekNumber) {
       eventsByType.residence_history.forEach(event => {
         popupContent += `
           <div class="popup-event">
-            <div class="popup-event-type" style="background: #42b883;">Residence</div>
+            <div class="popup-event-type" style="background: #14B8A6;">Residence</div>
             <div class="popup-event-title">${event.location}</div>
             ${event.description ? `<div class="popup-event-description">${event.description}</div>` : ''}
           </div>
