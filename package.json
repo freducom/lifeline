@@ -1,0 +1,59 @@
+{
+  "name": "lifeline-timeline",
+  "version": "1.0.0",
+  "description": "A beautiful, interactive timeline visualization tool for displaying life events, work experience, education, and achievements with a modern design",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server -p 8000 -o",
+    "dev": "npx http-server -p 8000 -o -c-1",
+    "lint": "npx eslint timeline.js",
+    "lint:fix": "npx eslint timeline.js --fix",
+    "validate": "npx html-validate index.html",
+    "serve": "python -m http.server 8000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/lifeline.git"
+  },
+  "keywords": [
+    "timeline",
+    "visualization",
+    "personal",
+    "career",
+    "education",
+    "responsive",
+    "interactive",
+    "javascript",
+    "css",
+    "html",
+    "facebook-design",
+    "mobile-friendly"
+  ],
+  "author": "Your Name",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/yourusername/lifeline/issues"
+  },
+  "homepage": "https://github.com/yourusername/lifeline#readme",
+  "devDependencies": {
+    "eslint": "^8.0.0",
+    "html-validate": "^7.0.0",
+    "http-server": "^14.0.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie <= 10"
+  ],
+  "files": [
+    "index.html",
+    "style.css",
+    "timeline.js",
+    "LICENSE",
+    "README.md"
+  ]
+}
