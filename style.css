@@ -31,8 +31,9 @@ h1 {
   flex-direction: column;
   align-items: flex-start;
   margin: 40px 20px;
-  width: calc(100vw - 40px);
-  overflow-x: auto;
+  width: calc(100% - 40px);
+  max-width: 100%;
+  overflow: hidden;
 }
 .year-row {
   display: flex;
@@ -129,9 +130,9 @@ h1 {
   
   #timeline-container {
     margin: 20px 10px;
-    width: calc(100vw - 20px);
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+    width: calc(100% - 20px);
+    max-width: 100%;
+    overflow: hidden;
   }
   
   .year-label {
@@ -182,7 +183,9 @@ h1 {
   
   #timeline-container {
     margin: 15px 5px;
-    width: calc(100vw - 10px);
+    width: calc(100% - 10px);
+    max-width: 100%;
+    overflow: hidden;
   }
   
   .year-label {
