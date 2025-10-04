@@ -240,6 +240,11 @@ h1 {
   }
 }
 
+/* Hide print legend on screen */
+.print-legend {
+  display: none;
+}
+
 /* Popup modal for all devices */
 .popup {
   display: none;
@@ -617,5 +622,170 @@ h1 {
     min-width: 160px;
     justify-content: center;
     padding: 7px 12px;
+  }
+}
+
+/* Print Stylesheet */
+@media print {
+  /* Reset and basic print layout */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  
+  body {
+    background: white !important;
+    font-size: 12pt;
+    line-height: 1.4;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Hide interactive elements */
+  .footer,
+  .popup,
+  .tile-tooltip {
+    display: none !important;
+  }
+  
+  /* Timeline title */
+  h1 {
+    color: #0F172A !important;
+    font-size: 18pt;
+    font-weight: 600;
+    text-align: center;
+    margin: 20pt 0;
+    page-break-after: avoid;
+  }
+  
+  /* Timeline container */
+  #timeline-container {
+    margin: 0;
+    width: 100%;
+    overflow: visible;
+  }
+  
+  /* Year rows */
+  .year-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8pt;
+    page-break-inside: avoid;
+    width: 100%;
+  }
+  
+  /* Year labels */
+  .year-label {
+    min-width: 50pt;
+    font-weight: 600;
+    color: #0F172A !important;
+    text-align: right;
+    margin-right: 8pt;
+    font-size: 10pt;
+  }
+  
+  /* Week tiles container */
+  .week-tiles {
+    display: flex;
+    gap: 1pt;
+    flex: 1;
+    background: transparent !important;
+  }
+  
+  /* Individual tiles */
+  .tile {
+    flex: 1;
+    height: 12pt;
+    min-width: 6pt;
+    max-width: 8pt;
+    background: white !important;
+    border: 0.5pt solid #E2E8F0 !important;
+    border-radius: 2pt;
+    position: relative;
+    margin: 0;
+    overflow: hidden;
+  }
+  
+  /* Tile content visibility */
+  .tile > div {
+    -webkit-print-color-adjust: exact !important;
+    color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  
+  /* Legend for print */
+  .print-legend {
+    display: block !important;
+    margin: 20pt 0;
+    padding: 10pt;
+    border: 1pt solid #E2E8F0;
+    border-radius: 4pt;
+    background: #F8FAFC !important;
+    page-break-inside: avoid;
+  }
+  
+  .print-legend h3 {
+    margin: 0 0 8pt 0;
+    font-size: 12pt;
+    font-weight: 600;
+    color: #0F172A !important;
+  }
+  
+  .legend-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6pt;
+    font-size: 9pt;
+  }
+  
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 4pt;
+  }
+  
+  .legend-color {
+    width: 8pt;
+    height: 8pt;
+    border-radius: 1pt;
+    border: 0.5pt solid #E2E8F0;
+  }
+  
+  /* Page breaks */
+  .page-break {
+    page-break-before: always;
+  }
+  
+  .no-break {
+    page-break-inside: avoid;
+  }
+  
+  /* Print-specific color overrides */
+  .print-work { background: #3B82F6 !important; }
+  .print-education { background: #EAB308 !important; }
+  .print-certification { background: #EF4444 !important; }
+  .print-residence-dark { background: #0F172A !important; }
+  .print-residence-light { background: #E2E8F0 !important; }
+  
+  /* Ensure sufficient contrast for black and white printing */
+  @media print and (monochrome) {
+    .tile {
+      border: 1pt solid black !important;
+    }
+    
+    .tile > div[style*="background"] {
+      background: black !important;
+    }
+    
+    .legend-color {
+      border: 1pt solid black !important;
+    }
+    
+    .print-work { background: #000 !important; }
+    .print-education { background: #666 !important; }
+    .print-certification { background: #999 !important; }
+    .print-residence-dark { background: #000 !important; }
+    .print-residence-light { background: #ccc !important; }
   }
 }

@@ -7,9 +7,35 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Lifeline – your life on a timeline</h1>
+  <h1>Lifeline – every tile is a week</h1>
   <div id="timeline-container">
     <!-- Timeline will be rendered here -->
+  </div>
+  
+  <!-- Print Legend (only visible when printing) -->
+  <div class="print-legend" style="display: none;">
+    <h3>📊 Timeline Legend</h3>
+    <div class="legend-items">
+      <div class="legend-item">
+        <div class="legend-color print-work"></div>
+        <span>Work Experience</span>
+      </div>
+      <div class="legend-item">
+        <div class="legend-color print-education"></div>
+        <span>Education</span>
+      </div>
+      <div class="legend-item">
+        <div class="legend-color print-certification"></div>
+        <span>Certifications</span>
+      </div>
+      <div class="legend-item">
+        <div class="legend-color print-residence-dark"></div>
+        <span>Residence (Primary)</span>
+      </div>
+    </div>
+    <p style="margin-top: 8pt; font-size: 8pt; color: #475569;">
+      Each tile represents one week. Colored bars show different life events and activities during that period.
+    </p>
   </div>
   
   <!-- Footer -->
