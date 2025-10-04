@@ -11,6 +11,20 @@ h1 {
   margin: 20px 0;
   font-weight: 600;
   letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.logo {
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.2);
+  transition: transform 0.2s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
 }
 #timeline-container {
   display: flex;
@@ -105,6 +119,12 @@ h1 {
     font-size: 2em;
     margin: 15px 10px;
     letter-spacing: 0.5px;
+    gap: 8px;
+  }
+  
+  .logo {
+    width: 24px;
+    height: 24px;
   }
   
   #timeline-container {
@@ -152,6 +172,12 @@ h1 {
   h1 {
     font-size: 1.8em;
     margin: 10px 5px;
+    gap: 6px;
+  }
+  
+  .logo {
+    width: 20px;
+    height: 20px;
   }
   
   #timeline-container {
